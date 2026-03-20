@@ -1,3 +1,4 @@
+```jsx
 import AnimateIn from '@/components/ui/AnimateIn'
 
 const CONTENT = {
@@ -18,7 +19,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#0f0f13] pt-nav"
+      className="relative min-h-screen flex items-center overflow-hidden bg-[var(--bg-primary)] pt-nav"
     >
       {/* Background depth layers */}
       <div className="absolute inset-0">
@@ -130,7 +131,7 @@ export default function Hero() {
                       className="flex-1 rounded-sm transition-all duration-300"
                       style={{
                         height: `${h}%`,
-                        background: `linear-gradient(to top, #0EA5E9, #38bdf8)`,
+                        background: `linear-gradient(to top, var(--brand-500), var(--sky-400))`,
                         opacity: i === 11 ? 1 : 0.3 + (i / 11) * 0.5,
                       }} />
                   ))}
@@ -191,3 +192,4 @@ export default function Hero() {
     </section>
   )
 }
+```

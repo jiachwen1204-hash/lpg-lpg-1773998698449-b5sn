@@ -23,9 +23,9 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="relative bg-[#0f0f13] border-t border-[#2a2a3a]">
-      <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, rgba(14,165,233,0.03) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
-      <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")", backgroundRepeat: 'repeat', backgroundSize: '256px 256px' }} />
+    <footer className="relative bg-neutral-950 border-t border-neutral-800">
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle,rgba(14,165,233,0.03)_1px,transparent_1px)] bg-[length:32px_32px]" />
+      <div className="absolute inset-0 pointer-events-none opacity-[0.04] bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')] bg-[length:256px_256px]" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-brand-500/5 blur-[120px] pointer-events-none" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-500/30 to-transparent" />
       
@@ -40,21 +40,21 @@ export default function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="mt-4 text-sm text-[#8b8ba7] max-w-xs leading-relaxed">
+            <p className="mt-4 text-sm text-neutral-400 max-w-xs leading-relaxed">
               {BRAND.tagline}
             </p>
             
             <div className="mt-6 space-y-3">
               <a
                 href={`mailto:${BRAND.email}`}
-                className="flex items-center gap-3 text-sm text-[#5a5a72] hover:text-brand-400 transition-colors group"
+                className="flex items-center gap-3 text-sm text-neutral-500 hover:text-brand-400 transition-colors group"
               >
                 <div className="w-9 h-9 rounded-lg bg-brand-500/10 flex items-center justify-center group-hover:bg-brand-500/20 transition-colors">
                   <Mail className="w-4 h-4 text-brand-400" />
                 </div>
                 {BRAND.email}
               </a>
-              <div className="flex items-start gap-3 text-sm text-[#5a5a72]">
+              <div className="flex items-start gap-3 text-sm text-neutral-500">
                 <div className="w-9 h-9 rounded-lg bg-brand-500/10 flex items-center justify-center mt-0.5 shrink-0">
                   <MapPin className="w-4 h-4 text-brand-400" />
                 </div>
@@ -62,7 +62,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-[#2a2a3a]">
+            <div className="mt-8 pt-6 border-t border-neutral-800">
               <Link
                 href="#contact"
                 className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-brand-500 text-white font-medium text-sm hover:bg-brand-700 transition-all duration-300 shadow-glow-sm hover:shadow-glow"
@@ -74,13 +74,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold text-[#f1f1f5] mb-4">Navigation</h3>
+            <h3 className="font-heading font-semibold text-neutral-100 mb-4">Navigation</h3>
             <ul className="space-y-3">
               {links.map(l => (
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="inline-block text-sm text-[#8b8ba7] hover:text-brand-400 transition-colors hover:translate-x-1 transform duration-200"
+                    className="inline-block text-sm text-neutral-400 hover:text-brand-400 transition-colors hover:translate-x-1 transform duration-200"
                   >
                     {l.label}
                   </a>
@@ -90,13 +90,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-heading font-semibold text-[#f1f1f5] mb-4">Legal</h3>
+            <h3 className="font-heading font-semibold text-neutral-100 mb-4">Legal</h3>
             <ul className="space-y-3">
               {legal.map(l => (
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="inline-block text-sm text-[#8b8ba7] hover:text-brand-400 transition-colors"
+                    className="inline-block text-sm text-neutral-400 hover:text-brand-400 transition-colors"
                   >
                     {l.label}
                   </Link>
@@ -106,12 +106,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-[#2a2a3a]">
+        <div className="pt-8 border-t border-neutral-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-[#5a5a72]">
+            <p className="text-sm text-neutral-500">
               © {year} {BRAND.name}. All rights reserved.
             </p>
-            <p className="text-sm text-[#5a5a72]">
+            <p className="text-sm text-neutral-500">
               Integrated AI solutions for the modern enterprise.
             </p>
           </div>

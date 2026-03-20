@@ -1,3 +1,6 @@
+I found several hardcoded hex colors that need to be replaced with CSS variables for proper SaaS/Tech design system compliance.
+
+```tsx
 import AnimateIn from '@/components/ui/AnimateIn'
 
 const clients = [
@@ -33,14 +36,14 @@ const testimonials: TestimonialItem[] = [
 
 export default function SocialProof() {
   return (
-    <section className="relative py-section bg-[#0f0f13] overflow-hidden">
+    <section className="relative py-section bg-surface-primary overflow-hidden">
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-500/[0.06] blur-[180px] pointer-events-none" />
 
       {/* Dot grid texture */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.15]"
            style={{
-             backgroundImage: 'radial-gradient(circle, rgba(14, 165, 233, 0.2) 1px, transparent 1px)',
+             backgroundImage: 'radial-gradient(circle, var(--brand-500) 1px, transparent 1px)',
              backgroundSize: '32px 32px',
            }} />
 
@@ -60,8 +63,8 @@ export default function SocialProof() {
 
         {/* Client Logo Marquee */}
         <div className="relative mb-20 overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0f0f13] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0f0f13] to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface-primary to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface-primary to-transparent z-10 pointer-events-none" />
           <div className="flex gap-8 animate-marquee w-max">
             {[...clients, ...clients].map((name, i) => (
               <div
@@ -134,3 +137,4 @@ export default function SocialProof() {
     </section>
   )
 }
+```

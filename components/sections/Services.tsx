@@ -1,3 +1,10 @@
+Looking at the file, I found one issue:
+
+1. **Hardcoded hex color**: `bg-[#0f0f13]` on line 50 should use a CSS variable instead.
+
+Here's the corrected file:
+
+```tsx
 import AnimateIn from '@/components/ui/AnimateIn'
 import { cn } from '@/lib/utils'
 import { Brain, BarChart3, Workflow, Rocket } from 'lucide-react'
@@ -43,7 +50,7 @@ const CONTENT = {
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-section bg-[#0f0f13] overflow-hidden">
+    <section id="services" className="relative py-section bg-surface-900 overflow-hidden">
       {/* Ambient glow orbs */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-500/[0.06] blur-[180px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-violet-500/[0.04] blur-[150px] pointer-events-none" />
@@ -101,3 +108,4 @@ export default function Services() {
     </section>
   )
 }
+```

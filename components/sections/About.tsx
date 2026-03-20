@@ -1,3 +1,4 @@
+```jsx
 import AnimateIn from '@/components/ui/AnimateIn'
 import { CheckCircle, Brain, Cpu, LineChart, Shield, Zap, Users } from 'lucide-react'
 
@@ -23,7 +24,7 @@ const CONTENT = {
 
 export default function About() {
   return (
-    <section id="about" className="relative py-section bg-[#0f0f13] overflow-hidden">
+    <section id="about" className="relative py-section bg-brand-950 overflow-hidden">
       {/* Background depth layers */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-30%] left-[-10%] w-[600px] h-[600px] rounded-full bg-brand-500/10 blur-[180px] animate-float" />
@@ -76,7 +77,7 @@ export default function About() {
         <AnimateIn delay={300}>
           <div className="grid grid-cols-3 gap-6 max-w-3xl mx-auto mb-20">
             {CONTENT.stats.map((stat, i) => (
-              <div key={stat.label} className="relative p-6 rounded-card-lg bg-white/[0.03] border border-white/8 text-center group hover:border-brand-500/30 hover:bg-white/[0.05] transition-all duration-300">
+              <div key={stat.label} className="relative p-6 rounded-card-lg bg-white/[0.03] border border-white/8 text-center group hover:border-brand-500/30 hover:bg-white/[0.05] transition-all duration-300 cursor-default">
                 <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand-500/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="font-heading font-black text-[clamp(1.75rem,4vw,2.5rem)] text-brand-400 mb-1">
                   {stat.value}
@@ -91,7 +92,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {CONTENT.values.map((value, i) => (
             <AnimateIn key={value.title} delay={400 + i * 80}>
-              <div className="group relative p-6 rounded-card-lg bg-white/[0.02] border border-white/8 hover:border-brand-500/30 hover:bg-white/[0.04] transition-all duration-300 h-full">
+              <div className="group relative p-6 rounded-card-lg bg-white/[0.02] border border-white/8 hover:border-brand-500/30 hover:bg-white/[0.04] transition-all duration-300 h-full cursor-default">
                 <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 bg-brand-500/0 group-hover:bg-brand-500/[0.02] transition-colors duration-500 rounded-card-lg" />
                 
@@ -130,3 +131,4 @@ export default function About() {
     </section>
   )
 }
+```

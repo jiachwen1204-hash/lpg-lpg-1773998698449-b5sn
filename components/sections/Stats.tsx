@@ -39,7 +39,7 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <section className="relative py-section overflow-hidden bg-[#0f0f13]">
+    <section className="relative py-section overflow-hidden bg-surface-primary">
       {/* Ambient glow orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-brand-500/10 blur-[180px] pointer-events-none" />
       <div className="absolute top-0 left-1/4 w-[300px] h-[300px] rounded-full bg-brand-500/5 blur-[120px] pointer-events-none" />
@@ -92,7 +92,7 @@ export default function Stats() {
                   <div className="font-heading font-black text-[clamp(2.5rem,5vw,3.5rem)] leading-[1] mb-3">
                     <CountUp target={stat.value} suffix={stat.suffix} />
                   </div>
-                  <div className="text-sm text-content-secondary/70 font-medium">
+                  <div className="text-sm text-content-secondary/70 font-body font-medium">
                     {stat.label}
                   </div>
                 </div>
